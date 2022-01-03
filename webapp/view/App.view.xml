@@ -2,8 +2,8 @@
     controllerName="sap.ui.demo.walkthrough.controller.App"
     xmlns="sap.m"
     xmlns:mvc="sap.ui.core.mvc">
-    
-    <Button text="Say hi!" press=".onShowHello"/>
+
+    <Button text="{i18n>showHelloButtonText}" press=".onShowHello"/>
     <Input 
         value="{/recipient/name}" 
         description="Show {/recipient/name}" 
