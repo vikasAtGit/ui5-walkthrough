@@ -7,25 +7,7 @@ sap.ui.define([
 ], function(Controller, MessageToast, JSONModel, ResoureModel) {
     "use strict";
 
-    return Controller.extend("sap.ui.demo.walkthrough", {
-
-        onInit: function() {
-            var oData = {
-                recipient: {
-                    name: "Recipient Name"
-                }
-            }
-            var oModel = new JSONModel(oData);
-            this.getView().setModel(oModel);
-
-            // setting resource model 
-            var i18nModel = new ResoureModel({
-                bundleName: "sap.ui.demo.walkthrough.i18n.i18n",
-                supportedLocales: [''],
-                fallbackLocale: ""
-            });
-            this.getView().setModel(i18nModel, "i18n");
-        },
+    return Controller.extend("sap.ui.demo.walkthrough.controller.App", {
 
         onShowHello: function() {
             // read msg from i18n model 
