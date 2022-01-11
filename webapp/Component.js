@@ -7,12 +7,7 @@ sap.ui.define([
     "use strict";
     return UIComponent.extend("sap.ui.demo.walkthrough.Component", {
         metadata: {
-            rootView: {
-                "viewName": "sap.ui.demo.walkthrough.view.App",
-                "type": "XML",
-                "async": true,
-                "id": "app"
-            }
+            manifest: "json"
         },
         init: function() {
             // call the init funcion of the parent
@@ -23,17 +18,9 @@ sap.ui.define([
                 recipient: {
                     name: "Recipient Name"
                 }
-            }
+            };
             var oModel = new JSONModel(oData);
-            this.setModel(oModel);
-
-            // setting resource model 
-            var i18nModel = new ResourceModel({
-                bundleName: "sap.ui.demo.walkthrough.i18n.i18n",
-                supportedLocales: [''],
-                fallbackLocale: ""
-            });
-            this.setModel(i18nModel, "i18n");
+            this.setModel(oModel);            
         }
     })
 });
